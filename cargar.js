@@ -54,6 +54,17 @@ function nuevo(){
         alert('Ingrese su fecha de nacimiento')
         return
     }
+    
+    for (let i = 0; i < tabla.length; i++) {
+        if (tabla[i].identificacion === identificacion) {
+
+            
+            alert("La identificacion ingresada ya existe");
+            
+            return;
+        }
+    }
+    
     cuerpotabla.innerHTML=`<tr><th scope="row">${'n'}</th><td>${identificacion}</td><td>${nombre}</td><td>${apellido}</td><td>${direccion}</td><td>${correo}</td><td>${telefono}</td><td>${pais}</td><td>${nacimiento}</td></tr>`
    
     let nuevo={identificacion:identificacion,nombre:nombre,apellido:apellido,direccion:direccion,correo:correo,telefono:telefono,pais:pais,nacimiento:nacimiento}
